@@ -2,6 +2,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom--Nodes-green)
 ![CI](https://github.com/marco-zanella/ComfyUI-BooleanExpression/actions/workflows/ci.yml/badge.svg)
+[![Publish to Comfy registry](https://github.com/marco-zanella/ComfyUI-BooleanExpression/actions/workflows/publish_action.yml/badge.svg)](https://github.com/marco-zanella/ComfyUI-BooleanExpression/actions/workflows/publish_action.yml)
 
 A collection of **logic and comparison nodes** for [ComfyUI](https://github.com/comfyanonymous/ComfyUI).  
 This package adds building blocks for boolean logic, arithmetic comparisons, and string comparisons, making it easier to design conditional workflows directly in ComfyUI.
