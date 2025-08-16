@@ -1,0 +1,499 @@
+{
+  "id": "9fcb005f-9e53-4e55-92a5-cd884454135a",
+  "revision": 0,
+  "last_node_id": 119,
+  "last_link_id": 219,
+  "nodes": [
+    {
+      "id": 115,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        800,
+        2030
+      ],
+      "size": [
+        300,
+        88
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            211
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Prompt for square image"
+      ]
+    },
+    {
+      "id": 116,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        800,
+        2160
+      ],
+      "size": [
+        300,
+        88
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            213
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Prompt for portrait image"
+      ]
+    },
+    {
+      "id": 117,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        800,
+        2290
+      ],
+      "size": [
+        300,
+        88
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            214
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Prompt for landscape image"
+      ]
+    },
+    {
+      "id": 109,
+      "type": "PrimitiveInt",
+      "pos": [
+        800,
+        1730
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            203,
+            207
+          ]
+        }
+      ],
+      "title": "Image Width",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        768,
+        "fixed"
+      ]
+    },
+    {
+      "id": 110,
+      "type": "PrimitiveInt",
+      "pos": [
+        800,
+        1860
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            206,
+            208
+          ]
+        }
+      ],
+      "title": "Image Height",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        1024,
+        "fixed"
+      ]
+    },
+    {
+      "id": 113,
+      "type": "BooleanExpression.ConditionalBranch",
+      "pos": [
+        1600,
+        1830
+      ],
+      "size": [
+        270,
+        78
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "if_true",
+          "type": "*",
+          "link": 211
+        },
+        {
+          "name": "if_false",
+          "type": "*",
+          "link": 212
+        },
+        {
+          "name": "condition",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "condition"
+          },
+          "link": 209
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type": "*",
+          "links": [
+            215
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BooleanExpression.ConditionalBranch"
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 111,
+      "type": "BooleanExpression.ArithmenticComparison.EqualTo",
+      "pos": [
+        1200,
+        1730
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first",
+          "type": "INT,FLOAT",
+          "link": 207
+        },
+        {
+          "name": "second",
+          "type": "INT,FLOAT",
+          "link": 208
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type": "BOOLEAN",
+          "links": [
+            209
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BooleanExpression.ArithmenticComparison.EqualTo"
+      },
+      "widgets_values": [],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 112,
+      "type": "BooleanExpression.ArithmenticComparison.LessThan",
+      "pos": [
+        1200,
+        1930
+      ],
+      "size": [
+        218,
+        46
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "first",
+          "type": "INT,FLOAT",
+          "link": 203
+        },
+        {
+          "name": "second",
+          "type": "INT,FLOAT",
+          "link": 206
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type": "BOOLEAN",
+          "links": [
+            210
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BooleanExpression.ArithmenticComparison.LessThan"
+      },
+      "widgets_values": [],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 114,
+      "type": "BooleanExpression.ConditionalBranch",
+      "pos": [
+        1200,
+        2020
+      ],
+      "size": [
+        270,
+        78
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "if_true",
+          "type": "*",
+          "link": 213
+        },
+        {
+          "name": "if_false",
+          "type": "*",
+          "link": 214
+        },
+        {
+          "name": "condition",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "condition"
+          },
+          "link": 210
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type": "*",
+          "links": [
+            212
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BooleanExpression.ConditionalBranch"
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 118,
+      "type": "PreviewAny",
+      "pos": [
+        1600,
+        1960
+      ],
+      "size": [
+        300,
+        140
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 215
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      203,
+      109,
+      0,
+      112,
+      0,
+      "INT,FLOAT"
+    ],
+    [
+      206,
+      110,
+      0,
+      112,
+      1,
+      "INT,FLOAT"
+    ],
+    [
+      207,
+      109,
+      0,
+      111,
+      0,
+      "INT,FLOAT"
+    ],
+    [
+      208,
+      110,
+      0,
+      111,
+      1,
+      "INT,FLOAT"
+    ],
+    [
+      209,
+      111,
+      0,
+      113,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      210,
+      112,
+      0,
+      114,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      211,
+      115,
+      0,
+      113,
+      0,
+      "*"
+    ],
+    [
+      212,
+      114,
+      0,
+      113,
+      1,
+      "*"
+    ],
+    [
+      213,
+      116,
+      0,
+      114,
+      0,
+      "*"
+    ],
+    [
+      214,
+      117,
+      0,
+      114,
+      1,
+      "*"
+    ],
+    [
+      215,
+      113,
+      0,
+      118,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6830134553650706,
+      "offset": [
+        326.6768471701099,
+        -1104.182427724215
+      ]
+    },
+    "frontendVersion": "1.23.4"
+  },
+  "version": 0.4
+}
