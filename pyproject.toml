@@ -1,0 +1,20 @@
+[project]
+name = "booleanexpression"
+description = "A collection of logic and comparison nodes for ComfyUI."
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/marco-zanella/ComfyUI-BooleanExpression"
+#  Used by Comfy Registry https://registry.comfy.org
+Documentation = "https://github.com/marco-zanella/ComfyUI-BooleanExpression/wiki"
+"Bug Tracker" = "https://github.com/marco-zanella/ComfyUI-BooleanExpression/issues"
+
+[tool.comfy]
+PublisherId = "marco-zanella"
+DisplayName = "ComfyUI-BooleanExpression"
+Icon = ""
+includes = []
+
